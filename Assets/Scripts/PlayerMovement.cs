@@ -61,8 +61,12 @@ public class PlayerMovement : MonoBehaviour
         crouchHeld = Input.GetButton("Crouch");
     }
 
+    
+    
+    
     private void FixedUpdate()
     {
+        
         PhysicsCheck();
         GroundMovement();
         MidAirMovement();
