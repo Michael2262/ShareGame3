@@ -82,9 +82,11 @@ public class PlayerMovement : MonoBehaviour
 
     void GroundMovement() 
     {
-        if (crouchHeld)
+        if (crouchHeld && !isCrouch && isOnGround)
             Crouch();
         else if (!crouchHeld && isCrouch)
+            StandUp();
+        else if (!isOnGround && isCrouch)
             StandUp();
 
         xVelocity = Input.GetAxis("Horizontal"); //-1f~1f
@@ -100,9 +102,14 @@ public class PlayerMovement : MonoBehaviour
 
     void MidAirMovement() 
     {
-        if(jumpPressed && isOnGround && !isJump) 
+        if (jumpPressed && isOnGround && !isJump) 
         {
-
+            if (isCrouch && isOnGround) 
+            {
+                StandUp();
+                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            }
+            
             isOnGround = false;
             isJump = true;
 
