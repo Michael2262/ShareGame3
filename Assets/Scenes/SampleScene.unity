@@ -401,6 +401,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12849e85bfd7fb94797f0d01dda24a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  crouchSpeedDivisor: 3
+  jumpForce: 6.3
+  jumpHoldForce: 1.9
+  jumpHoldDuration: 0.1
+  crouchJumpBoost: 2.5
+  isCrouch: 0
+  isOnGround: 0
+  isJump: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  jumpPressed: 0
+  jumpHeld: 0
+  crouchHeld: 0
 --- !u!1 &601035645
 GameObject:
   m_ObjectHideFlags: 0
