@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public PlayerInputControl inputControl;
     //私有的RD2D值，在awake中，藉由GetComponent獲得外面<Rigidbody2D>自身的值
     private Rigidbody2D rb;
+    //抓到物理模擬裡面的值
+    private PhysicsCheck physicsCheck;
     public Vector2 inputDirection;
     [Header("基本參數")]
     public float speed;
@@ -17,7 +19,9 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        physicsCheck = GetComponent<PhysicsCheck>();
         inputControl = new PlayerInputControl();
+        //Jump.後面可以有很多不同的時機，started是其中一種，+= 是註冊一個函數，註冊的函數在下面
         inputControl.Gameplay.Jump.started += Jump;
     }
 
@@ -66,7 +70,10 @@ public class PlayerController : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext context)
     {
-        rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        //Debug.Log("JUMP")
+        //rigibody給一個transform.up(世界座標向上方向的力)*jumpForce，這樣已經寫好了，後面可以增加ForceMode2D，Impulse是瞬時的力、Force是普通的
+        if(physicsCheck.isGround)
+            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
 
 }
