@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public PlayerInputControl inputControl;
     //私有的RD2D值，在awake中，藉由GetComponent獲得外面<Rigidbody2D>自身的值
     private Rigidbody2D rb;
+    private BoxCollider2D box;
     //抓到物理模擬裡面的值
     private PhysicsCheck physicsCheck;
     public Vector2 inputDirection;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        box = GetComponent<BoxCollider2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
         inputControl = new PlayerInputControl();
         //Jump.後面可以有很多不同的時機，started是其中一種，+= 是註冊一個函數，註冊的函數在下面
@@ -42,12 +44,14 @@ public class PlayerController : MonoBehaviour
     {
         //inputDirection會時時偵測我控制器中的移動相關 
         inputDirection = inputControl.Gameplay.Move.ReadValue<Vector2>();
+
     }
 
     //週期性的固定執行，通常跟物理有關會放在這裡
     private void FixedUpdate()
     {
         Move();
+        Squate();
     }
 
     public void Move() 
@@ -68,6 +72,17 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
+    public void Squate() 
+    {
+        
+    }
+
+
+
+
+
+
     private void Jump(InputAction.CallbackContext context)
     {
         //Debug.Log("JUMP")
@@ -75,5 +90,7 @@ public class PlayerController : MonoBehaviour
         if(physicsCheck.isGround)
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
+
+
 
 }
