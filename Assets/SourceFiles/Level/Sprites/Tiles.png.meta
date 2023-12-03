@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tiles_0
+      name: PlatformsGlass_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_1
+      name: PlatformsGlass_1
       rect:
         serializedVersion: 2
         x: 16
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_2
+      name: PlatformsGlass_2
       rect:
         serializedVersion: 2
         x: 32
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_3
+      name: PlatformsGlass_3
       rect:
         serializedVersion: 2
         x: 48
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_4
+      name: PlatformsGlass_4
       rect:
         serializedVersion: 2
         x: 64
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_5
+      name: PlatformsGlass_5
       rect:
         serializedVersion: 2
         x: 96
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_6
+      name: PlatformsGlass_6
       rect:
         serializedVersion: 2
         x: 112
@@ -588,7 +588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_23
+      name: PlatformsGlass_7
       rect:
         serializedVersion: 2
         x: 96
@@ -9859,8 +9859,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tiles_0: -1087808979
-      Tiles_1: -232904253
+      PlatformsGlass_0: -1087808979
+      PlatformsGlass_1: -232904253
+      PlatformsGlass_2: 537331992
+      PlatformsGlass_3: 2015893932
+      PlatformsGlass_4: 1493743841
+      PlatformsGlass_5: 697877736
+      PlatformsGlass_6: 1120918385
+      PlatformsGlass_7: -145430068
       Tiles_10: -1407484239
       Tiles_100: 889679168
       Tiles_101: 1398828952
@@ -9971,7 +9977,6 @@ TextureImporter:
       Tiles_197: 23067991
       Tiles_198: 610063183
       Tiles_199: 1421496738
-      Tiles_2: 537331992
       Tiles_20: 1894950445
       Tiles_200: -415237582
       Tiles_201: 1365139994
@@ -10005,7 +10010,6 @@ TextureImporter:
       Tiles_227: 588706457
       Tiles_228: -332394682
       Tiles_229: -160857555
-      Tiles_23: -145430068
       Tiles_230: -210122863
       Tiles_231: -848155877
       Tiles_232: -1619896961
@@ -10082,7 +10086,6 @@ TextureImporter:
       Tiles_297: -1747446878
       Tiles_298: 1215810428
       Tiles_299: 126140721
-      Tiles_3: 2015893932
       Tiles_30: -1046857914
       Tiles_300: -1914141909
       Tiles_301: -61178373
@@ -10181,7 +10184,6 @@ TextureImporter:
       Tiles_397: -438212579
       Tiles_398: -1819824616
       Tiles_399: -1759212146
-      Tiles_4: 1493743841
       Tiles_40: -1311431243
       Tiles_400: -342719948
       Tiles_401: -329698258
@@ -10256,7 +10258,6 @@ TextureImporter:
       Tiles_47: 1661505300
       Tiles_48: -271506086
       Tiles_49: -1787649197
-      Tiles_5: 697877736
       Tiles_50: 367500165
       Tiles_51: -1305995503
       Tiles_52: -1543783579
@@ -10267,7 +10268,6 @@ TextureImporter:
       Tiles_57: -676353904
       Tiles_58: -157069693
       Tiles_59: -1026678389
-      Tiles_6: 1120918385
       Tiles_60: 2036153025
       Tiles_61: 320370781
       Tiles_62: -1079620343
